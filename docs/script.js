@@ -91,7 +91,7 @@ function bcee(row) {
 
 	var fields = {};
 
-	fields['date'] = row[0];
+	fields['date'] = row[0].replace(/\s\s+/g, ' ').trim();
 	fields['amount'] = row[3].replace(/\xA0/g, '').replace(/ /g, '').replace(/,/g, '.'); //this is not a space but some strange character
 
 	fields['payee'] = row[1];
