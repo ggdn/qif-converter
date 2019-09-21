@@ -78,7 +78,7 @@ function convertTransaction(transactionCsv, bank) {
 	transaction += 'P' + fields['payee'] + '\n';
 	if (fields['category']) transaction += 'L' + fields['category'] + '\n';
 
-	transaction += '^\n\n';
+	transaction += '^\n';
 	return transaction;
 }
 
